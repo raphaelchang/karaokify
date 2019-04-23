@@ -1,0 +1,6 @@
+[submodule "Wave-U-Net"]
+	path = Wave-U-Net
+	url = https://github.com/f90/Wave-U-Net
+[submodule "Montreal-Forced-Aligner"]
+	path = Montreal-Forced-Aligner
+	url = https://github.com/MontrealCorpusTools/Montreal-Forced-Aligner
