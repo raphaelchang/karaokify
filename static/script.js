@@ -57,7 +57,6 @@ $(document).ready(function() {
                     reader.onload = function(e) {
                         sound.src = this.result;
                         sound.controls = true;
-                        $('#audio-upload').val('');
                         //$("#sound").on('timeupdate', function() {
                         interval = setInterval(function() {
                             var next = 0;

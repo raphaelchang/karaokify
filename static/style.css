@@ -45,6 +45,7 @@ h1 {
     font-size: 100pt;
     text-align: center;
     color: #334;
+    font-weight: normal;
 }
 
 #upload-container {
