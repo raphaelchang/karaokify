@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "Strawberry";
+    src: url("strawberry.ttf");
+}
+
+
+input[type=file] { 
+    width: 0px; 
+    visibility: hidden;
+    margin: 0;
+}
+
+input[type=submit] { 
+    width: 0px; 
+    visibility: hidden;
+    margin: 0;
+}
+
+textarea {
+    margin: 50px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    resize: none;
+    flex: 1;
+    border-radius: 10px;
+    font-size: 20pt;
+    padding: 10px;
+    border: 3px solid #ddd;
+}
+
+body {
+    background: #dde0ff;
+    font-family: 'Trebuchet MS', 'Arial'
+}
+
+h1 {
+    font-family: 'Strawberry';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: block;
+    font-size: 100pt;
+    text-align: center;
+    color: #334;
+}
+
+#upload-container {
+    position: absolute;
+    background: #fff;
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    top: 250px;
+    left: 100px;
+    right: 100px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    max-width: 1300px;
+    border-radius: 20px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 12px 0 rgba(0, 0, 0, 0.05);
+    min-height: 780px;
+    overflow: hidden;
+}
+
+#inner-flex {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+
+#audio-upload-button {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    margin: 50px;
+    text-align: center;
+    width: 35%;
+    height: 0;
+    padding-bottom: 35%;
+    overflow: hidden;
+    font-size: 180pt;
+    color: #c0d0ff;
+    border-radius: 20px;
+    border: 10px dashed #ccc;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#audio-upload-button > #icon {
+    position: absolute;
+    top: 48%;
+    transform: translateY(-50%);
+}
+
+#audio-upload-button > #filename {
+    margin: 0 auto;
+    padding: 0 5px;
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 0;
+    right: 0;
+    font-size: 16pt;
+    color: #999;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#karaokify-button {
+    cursor: pointer;
+    width: auto;
+    display: flex;
+    background: #b0c0ff;
+    font-size: 70pt;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#playback-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #111;
+    display: none;
+    z-index: 101;
+    opacity: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#playback-container > audio {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 202;
+}
+
+#lyrics-play {
+    position: absolute;
+    font-size: 40pt;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: calc(50% - 40pt);
+    text-align: center;
+    color: white;
+    z-index: 200;
+    line-height: 80px;
+    -webkit-transition:all 200ms ease-in-out;
+    -moz-transition:all 200ms ease-in-out;
+    -o-transition:all 200ms ease-in-out;
+    transition:all 200ms ease-in-out;
+}
+
+#grad {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 201;
+    background-image: linear-gradient(rgba(0, 0, 0, 1.0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 1.0));
+}
+
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+#spinner-cont {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 100;
+    font-size: 100pt;
+    color: #555;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#spinner {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 1000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 1000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0 auto;
+}
+

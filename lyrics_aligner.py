@@ -94,8 +94,8 @@ def align_lyrics(audio_path, lyrics_path):
     shutil.copyfile(lyrics_path, lyrics_file)
     run_alignment(tmpdir, os.path.join(tmpdir, 'out'))
     result = parse_textgrid(os.path.join(tmpdir, 'out', os.path.splitext(os.path.basename(vad_out))[0] + ".TextGrid"), segments)
-    print(segments)
-    print(result)
+    # print(segments)
+    # print(result)
     return result
 
 if __name__=='__main__':

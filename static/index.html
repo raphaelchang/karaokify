@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Karaokify!</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+        <script src="https://use.fontawesome.com/75f6e53f54.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+         <h1 id="title">Karaokify</h1>
+         <div id="upload-container">
+         <div id="inner-flex">
+             <div id="audio-upload-button">
+                 <span id="icon"><i class="fa fa-music" aria-hidden="true"></i></span>
+                 <span id="filename"></span>
+             </div>
+             <textarea id="lyrics" name="lyrics" form="form" placeholder="Enter lyrics here..." required></textarea>
+         </div>
+         <div id="karaokify-button">Karaokify!</div>
+         <div id="spinner-cont">
+             <i id="spinner" class="fa fa-spinner" aria-hidden="true"></i>
+         </div>
+         </div>
+         <div id="playback-container">
+             <audio id="sound" controls></audio>
+             <div id="lyrics-play"></div>
+             <div id="grad"></div>
+         </div>
+         <form id="form" action="javascript:;" method="POST" enctype="multipart/form-data">
+             <input id="audio-upload" type="file" name="audio" accept="audio/*" required>
+             <input id="submit" type="submit">
+         </form>
+    </body>
+</html>
