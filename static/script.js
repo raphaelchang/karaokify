@@ -11,7 +11,7 @@ $(document).ready(function() {
         e.preventDefault()
         $("#spinner-cont").show();
         loading = true;
-        var lyrics = $("#lyrics").val().replace(/ *\([^)]*\) */g, "").replace(/ +(\W)/g, "$1").replace(/\s+(\W+)\s+/g, " ").replace(/ +(?= )/g, '').replace(/\n{2,}/g, '\n');
+        var lyrics = $("#lyrics").val().replace(/\([^)]*\)/g, "").replace(/ +(\W)/g, "$1").replace(/\s+(\W+)\s+/g, " ").replace(/ +(?= )/g, '').replace(/\n{2,}/g, '\n');
         var lyrics_spl = lyrics.split("\n");
         var lyrics_html = "";
         var str_to_send = "";
